@@ -1,11 +1,14 @@
 import React from "react";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
+import Directory from "./components/Directory"
 
 class App extends React.Component {
 
-  constructor(props) {
-    super(props);
-  }
+  state = {
+    employees: [],
+    sort: "ascending"
+  };
 
   getEmployees = () => {
     const url = "https://randomuser.me/api/?results=50"
@@ -13,7 +16,8 @@ class App extends React.Component {
       .then((results) => results.json())
       .then((data) => {
         console.log('data >> ', data)
-        return data;
+
+        this.setState({ employees: data.results })
       })
   }
 
@@ -22,7 +26,7 @@ class App extends React.Component {
   }
 
   render() {
-    return <h1>Hello world!</h1>;
+    return <Directory employees={this.state.employees} />;
   }
 }
 
