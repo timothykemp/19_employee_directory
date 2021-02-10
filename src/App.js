@@ -1,5 +1,4 @@
 import React from "react";
-import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import Directory from "./components/Directory"
 
@@ -11,7 +10,7 @@ class App extends React.Component {
   };
 
   getEmployees = () => {
-    const url = "https://randomuser.me/api/?results=50"
+    const url = "https://randomuser.me/api/?results=50&nat=us"
     fetch(url)
       .then((results) => results.json())
       .then((data) => {
