@@ -1,8 +1,8 @@
-import React from "react";
+import React, { Component } from "react";
 import './App.css';
 import Directory from "./components/Directory"
 
-class App extends React.Component {
+class App extends Component {
 
   state = {
     employees: [],
