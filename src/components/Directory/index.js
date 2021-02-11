@@ -1,8 +1,7 @@
 import React from 'react';
-import { Table } from 'react-bootstrap';
+import { Container, Table } from 'react-bootstrap';
 import TableHead from '../TableHead';
 import TableBody from '../TableBody';
-import Container from '../Container';
 
 function Directory({ employees }) {
 
