@@ -1,0 +1,11 @@
+.Jumbotron {
+  background-color: darkblue;
+  text-align: center;
+  color: white;
+  border-bottom: .5rem;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-style: solid;
+  border-color: darkred;
+}

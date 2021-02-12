@@ -1,19 +1,17 @@
 import React from 'react';
 import { Container, Jumbotron } from 'react-bootstrap';
-import Wrapper from '../Wrapper';
+import style from './style.module.css';
 
 function Header() {
     return (
-        <Wrapper>
-            <Jumbotron>
-                <Container>
-                    <h1>Employee Directory</h1>
-                    <p>
-                        Click on column headings to sort the directory by selected column, or use the search box to filter your results.
+        <Jumbotron className={style.Jumbotron}>
+            <Container>
+                <h1>Employee Directory</h1>
+                <p>
+                    Click on column headings to sort the directory by selected column, or use the search box to filter your results.
             </p>
-                </Container>
-            </Jumbotron>
-        </Wrapper>
+            </Container>
+        </Jumbotron>
     );
 }
 
