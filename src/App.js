@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import './App.css';
-import Directory from "./components/Directory"
+import Header from './components/Header';
+import Directory from './components/Directory';
+import Wrapper from './components/Wrapper';
 
 class App extends Component {
 
@@ -25,7 +27,12 @@ class App extends Component {
   }
 
   render() {
-    return <Directory employees={this.state.employees} />;
+    return (
+      <Wrapper>
+        <Header />
+        <Directory employees={this.state.employees} />
+      </Wrapper>
+    )
   }
 }
 

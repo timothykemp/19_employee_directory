@@ -6,7 +6,7 @@ import TableBody from '../TableBody';
 function Directory({ employees }) {
 
     return (
-        <Container>
+        <Container fluid>
             <Table striped bordered hover>
                 <TableHead />
                 <TableBody employees={employees} />
