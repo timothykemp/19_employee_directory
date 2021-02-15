@@ -1,13 +1,13 @@
 import React, { Component } from "react";
-// import './App.css';
 import Header from './components/Header';
-import Directory from './components/Directory';
+import Directory from './components/DataTable';
+// import API from "./utils/API";
 
 class App extends Component {
 
   state = {
     employees: [],
-    sort: "ascending"
+    search: "",
   };
 
   getEmployees = () => {
@@ -34,5 +34,17 @@ class App extends Component {
     )
   }
 }
+
+// import Header from './components/Header';
+// import Directory from './components/DataTable';
+
+// function App() {
+//   return (
+//     <div>
+//       <Header />
+//       <Directory />
+//     </div>
+//   )
+// }
 
 export default App;
