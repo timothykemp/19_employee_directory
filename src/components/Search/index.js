@@ -1,14 +1,16 @@
 import React from 'react';
 
-function Search({ employees }) {
+function Search(props) {
     return (
         <form>
-            <div className="row">
-                <div className="col">
+            <div className="form-group">
+                <div className="input-group">
                     <input
-                        // onChange={employees.handleInputChange}
+                        onChange={props.handleInputChange}
+                        value={props.search}
+                        name="search"
                         type="text"
-                        className="form-control mb-3"
+                        className="form-control"
                         placeholder="Search Here"
                         id="search"
                     />
