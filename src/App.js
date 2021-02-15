@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Header from './components/Header';
-import Directory from './components/DataTable';
+import Directory from './components/Directory';
 // import API from "./utils/API";
 
 class App extends Component {
