@@ -2,7 +2,6 @@ import React from 'react';
 import { Container, Table } from 'react-bootstrap';
 import dateFormat from 'dateformat';
 import style from './style.module.css';
-import { propTypes } from 'react-bootstrap/esm/Image';
 
 function DataTable({ employees }) {
 
@@ -12,7 +11,7 @@ function DataTable({ employees }) {
                 <thead>
                     <tr>
                         <th>Image</th>
-                        <th onClick={propTypes.sortByName}>Name</th>
+                        <th >Name</th>
                         <th>Phone</th>
                         <th>Email</th>
                         <th>Birthday</th>

@@ -1,12 +1,13 @@
 import React from 'react';
+import Form from 'react-bootstrap';
 
-function Search(props) {
+function Search({ employees }) {
     return (
-        <form>
+        <Form>
             <div className="row">
                 <div className="col">
                     <input
-                        onChange={props.handleInputChange}
+                        onChange={employees.handleInputChange}
                         type="text"
                         className="form-control mb-3"
                         placeholder="Search Here"
@@ -14,7 +15,7 @@ function Search(props) {
                     />
                 </div>
             </div>
-        </form>
+        </Form>
     )
 }
 
