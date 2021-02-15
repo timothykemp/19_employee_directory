@@ -8,7 +8,7 @@ function Header() {
             <Container>
                 <h1>Employee Directory</h1>
                 <p>
-                    Click on column headings to sort the directory by selected column, or use the search box to filter your results.
+                    Click on arrow by first or last name to sort the directory by selected column, or use the search box to filter your results.
             </p>
             </Container>
         </Jumbotron>

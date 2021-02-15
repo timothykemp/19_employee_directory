@@ -10,7 +10,7 @@ class Directory extends Component {
 
     state = {
         employees: [],
-        filtered: "",
+        sorted: "",
         search: ""
     };
 
@@ -38,11 +38,27 @@ class Directory extends Component {
             return 0;
         });
 
-        if (this.state.filtered === "DESC") {
+        if (this.state.sorted === "DESC") {
             sortEmp.reverse();
-            this.setState({ filtered: "ASC" });
+            this.setState({ sorted: "ASC" });
         } else {
-            this.setState({ filtered: "DESC" });
+            this.setState({ sorted: "DESC" });
+        }
+        this.setState({ employees: sortEmp });
+    };
+
+    sortByLastName = () => {
+        const sortEmp = this.state.employees.sort((a, b) => {
+            if (b.name.last > a.name.last) { return -1; }
+            if (a.name.last > b.name.last) { return 1; }
+            return 0;
+        });
+
+        if (this.state.sorted === "DESC") {
+            sortEmp.reverse();
+            this.setState({ sorted: "ASC" });
+        } else {
+            this.setState({ sorted: "DESC" });
         }
         this.setState({ employees: sortEmp });
     };
@@ -51,7 +67,9 @@ class Directory extends Component {
         return (
             <Container>
 
-                <Search handleInputChange={this.handleInputChange} search={this.state.search} />
+                <Search
+                    handleInputChange={this.handleInputChange}
+                    search={this.state.search} />
 
                 <Table striped bordered hover responsive className={style.Table}>
                     <thead>
@@ -64,24 +82,42 @@ class Directory extends Component {
                             <th>Birthday</th>
                         </tr>
                     </thead>
-
-                    <tbody>
-                        {
-                            this.state.employees.map((employee) => {
-                                return (
-
-                                    <tr key={employee.login.uuid}>
-                                        <td><img src={employee.picture.large} alt={employee.name.first + " " + employee.name.last} /></td>
+                    {
+                        this.state.employees &&
+                        this.state.employees.map((employee) =>
+                            employee.name.first.toLowerCase().includes(this.state.search) ? (
+                                <tbody key={employee.login.uuid}>
+                                    <tr >
+                                        <td>
+                                            <img src={employee.picture.large} alt={employee.name.first + " " + employee.name.last} />
+                                        </td>
                                         <td>{employee.name.first}</td>
                                         <td>{employee.name.last}</td>
                                         <td>{employee.phone}</td>
-                                        <td><a href={"mailto:" + employee.email}>{employee.email}</a></td>
+                                        <td>
+                                            <a href={"mailto:" + employee.email}>{employee.email}</a>
+                                        </td>
                                         <td>{dateFormat(employee.dob.date, "paddedShortDate")}</td>
                                     </tr>
-                                )
-                            })
-                        }
-                    </tbody>
+                                </tbody>
+                            ) :
+                                employee.name.last.toLowerCase().includes(this.state.search) ? (
+                                    <tbody key={employee.login.uuid}>
+                                        <tr >
+                                            <td>
+                                                <img src={employee.picture.large} alt={employee.name.first + " " + employee.name.last} />
+                                            </td>
+                                            <td>{employee.name.first}</td>
+                                            <td>{employee.name.last}</td>
+                                            <td>{employee.phone}</td>
+                                            <td>
+                                                <a href={"mailto:" + employee.email}>{employee.email}</a>
+                                            </td>
+                                            <td>{dateFormat(employee.dob.date, "paddedShortDate")}</td>
+                                        </tr>
+                                    </tbody>
+                                ) : null
+                        )}
                 </Table>
             </Container>
         )
