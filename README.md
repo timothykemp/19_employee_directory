@@ -1,70 +1,72 @@
-# Getting Started with Create React App
+# 19_employee_directory
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Table of Contents
 
-## Available Scripts
+* [Description](#description)
+* [Installation](#installation)
+* [Usage](#usage)
+* [Videos](#videos)
+* [License](#license)
+* [Contributing](#contributing)
+* [Tests](#tests)
+* [Questions](#questions)
 
-In the project directory, you can run:
+-----
 
-### `npm start`
+## Description
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+This was a homework assignment where the challenge was to create an employee directory using React and an API to supply the random employee data [Random User Generator](https://randomuser.me/).
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+**Please Note:** This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-### `npm test`
+Example images:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![Main Page](./public/employee-directory.png)
 
-### `npm run build`
+-----
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Installation
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+This application is currently deployed, and it can be viewed at the following link:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+* [Employee Directory](https://timothykemp.dev/19_employee_directory)
 
-### `npm run eject`
+Those interested in installing this application should take the following steps:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+1. Run the command `npm i` to ensure the correct Node Modules are installed prior to running the application.
+2. Run the command `npm start` to start up the application on your local host.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+-----
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Usage
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Follow the prompts in the CLI to perform the following commands:
 
-## Learn More
+1. Click on the arrow by First Name to sort the list of employees by their first names.
+2. Click on the arrow by Last Name to sort the list of employees by their last names.
+3. Search for any string of alphabetical characters in order to automatically filter the list of employees to only those with those characters in their first OR last names.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+-----
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## License
 
-### Code Splitting
+This project does not have a license.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+-----
 
-### Analyzing the Bundle Size
+## Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+This application was a homework assignment, and further contributions are not needed.
 
-### Making a Progressive Web App
+-----
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Tests
 
-### Advanced Configuration
+There are no specific tests provided for this application; however, in the event any issues are discovered, feel free to contact me using one of the methods below.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+-----
 
-### Deployment
+## Questions
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+If you have any questions about this project, please free to contact me through my [Github profile](https://github.com/timothykemp) or via [email](mailto:timothymichaelkemp@gmail.com).
+  
