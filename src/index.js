@@ -1,3 +1,4 @@
+// Importing required components and modules
 import React from 'react';
 import ReactDOM from 'react-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';

@@ -1,5 +1,7 @@
+// Importing required components and modules
 import React from 'react';
 
+// Build search field with imported props
 function Search(props) {
     return (
         <form>

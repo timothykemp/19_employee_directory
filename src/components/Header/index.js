@@ -1,7 +1,9 @@
+// Importing required components and modules
 import React from 'react';
 import { Container, Jumbotron } from 'react-bootstrap';
 import style from './style.module.css';
 
+// Build page header
 function Header() {
     return (
         <Jumbotron className={style.Jumbotron}>

@@ -1,3 +1,4 @@
+// Importing necessary components and modules
 import React, { Component } from "react";
 import Container from "../Container";
 import Search from "../Search";
@@ -8,12 +9,14 @@ import API from "../../utils/API";
 
 class Directory extends Component {
 
+    // Initial states
     state = {
         employees: [],
         sorted: "",
         search: ""
     };
 
+    // Get random employee data once component loads properly
     componentDidMount() {
         API.getEmployees()
             .then((res) => {
@@ -22,6 +25,7 @@ class Directory extends Component {
             .catch((err) => console.error(err));
     }
 
+    // Handle search instantly with each character entered
     handleInputChange = (event) => {
         if (event.target.name === "search") {
             const userSearch = event.target.value.toLowerCase();
@@ -31,6 +35,7 @@ class Directory extends Component {
         }
     };
 
+    // Logic to sort list of employees by first name
     sortByFirstName = () => {
         const sortEmp = this.state.employees.sort((a, b) => {
             if (b.name.first > a.name.first) { return -1; }
@@ -47,6 +52,7 @@ class Directory extends Component {
         this.setState({ employees: sortEmp });
     };
 
+    // Logic to sort list of employees by last name
     sortByLastName = () => {
         const sortEmp = this.state.employees.sort((a, b) => {
             if (b.name.last > a.name.last) { return -1; }
@@ -63,15 +69,19 @@ class Directory extends Component {
         this.setState({ employees: sortEmp });
     };
 
+    // JSX for search form and table of employee directory data
     render() {
         return (
             <Container>
 
+                {/* Search component with passed props */}
                 <Search
                     handleInputChange={this.handleInputChange}
                     search={this.state.search} />
 
+                {/* Employee data table with passed props */}
                 <Table striped bordered hover responsive className={style.Table}>
+                    {/* Table headings */}
                     <thead>
                         <tr>
                             <th>Image</th>
@@ -82,6 +92,8 @@ class Directory extends Component {
                             <th>Birthday</th>
                         </tr>
                     </thead>
+
+                    {/* Table body rows */}
                     {
                         this.state.employees &&
                         this.state.employees.map((employee) =>
